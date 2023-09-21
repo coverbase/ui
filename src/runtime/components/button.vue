@@ -34,12 +34,11 @@ withDefaults(
 
 const variants: Record<Variant, string> = {
     "primary":
-        "text-white bg-primary-500 border-primary-500 hover:border-primary-400 active:border-primary-300 hover:bg-primary-400 active:bg-primary-300 svg:text-white",
-    "gray": "text-primary-500 bg-gray-100 border-gray-100 hover:border-gray-200 active:border-gray-200 hover:bg-gray-200 active:bg-gray-200 svg:text-primary-500",
+        "text-white bg-primary-500 border-primary-500 hover:border-primary-400 active:border-primary-300 hover:bg-primary-400 active:bg-primary-300",
+    "gray": "bg-gray-100 border-gray-100 hover:border-gray-200 active:border-gray-200 hover:bg-gray-200 active:bg-gray-200",
     "danger":
-        "text-white bg-red-500 border-red-500 hover:border-red-600 active:border-red-600 hover:bg-red-600 active:bg-red-700 svg:text-white",
-    "outline":
-        "text-primary-500 border-gray-200 bg-white hover:bg-slate-50 active:bg-slate-100 svg:text-primary-500",
-    "text": "text-primary-500 bg-transparent border-transparent hover:border-slate-100 active:border-gray-200 hover:bg-slate-100 active:bg-gray-200 svg:text-primary-500",
+        "text-white bg-red-500 border-red-500 hover:border-red-600 active:border-red-600 hover:bg-red-600 active:bg-red-700",
+    "outline": "bg-white border-gray-200 hover:bg-gray-50 active:bg-gray-100",
+    "text": "bg-transparent border-transparent hover:border-gray-100 active:border-gray-200 hover:bg-gray-100 active:bg-gray-200",
 };
 </script>
