@@ -8,7 +8,7 @@
             <IconSlash
                 width="20"
                 height="20"
-                class="text-secondary"
+                class="text-gray-400"
                 v-if="index !== routes.length - 1"
             />
         </template>

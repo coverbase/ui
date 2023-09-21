@@ -11,7 +11,7 @@
 <script setup lang="ts">
 import type { Component } from "vue";
 
-type Variant = "primary" | "secondary";
+type Variant = "primary" | "gray";
 
 withDefaults(
     defineProps<{
@@ -25,7 +25,7 @@ withDefaults(
 );
 
 const variants: Record<Variant, string> = {
-    "primary": "hover:text-secondary",
-    "secondary": "text-secondary hover:text-primary",
+    "primary": "hover:text-gray-400",
+    "gray": "text-gray-400 hover:text-primary-500",
 };
 </script>

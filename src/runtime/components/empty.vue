@@ -1,6 +1,6 @@
 <template>
     <div
-        class="flex flex-col items-center rounded border border-dashed border-tertiary bg-tertiary p-4"
+        class="flex flex-col items-center rounded border border-dashed border-gray-200 bg-gray-200 p-4"
     >
         <IconError404 width="30" height="30" />
 

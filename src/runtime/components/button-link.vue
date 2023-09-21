@@ -1,10 +1,5 @@
 <template>
-    <Button
-        class="!justify-start"
-        :variant="isActive ? 'secondary' : 'text'"
-        :to="to"
-        :as="NuxtLink"
-    >
+    <Button class="!justify-start" :variant="isActive ? 'gray' : 'text'" :to="to" :as="NuxtLink">
         <component width="20" height="20" :is="icon" />
 
         <span class="hidden sm:inline-block">

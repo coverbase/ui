@@ -1,6 +1,6 @@
 {
     "name": "@coverbase/ui",
-    "version": "0.0.12",
+    "version": "0.0.13",
     "homepage": "https://coverbase.co",
     "repository": "coverbase/coverbase",
     "license": "MIT",
@@ -18,8 +18,7 @@
         "dist"
     ],
     "scripts": {
-        "build": "nuxt-module-build",
-        "publish": "npm publish --access public"
+        "build": "nuxt-module-build"
     },
     "dependencies": {
         "@nuxt/kit": "^3.7.1",

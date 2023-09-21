@@ -1,6 +1,6 @@
 <template>
     <component
-        class="relative inline-flex cursor-pointer items-center justify-center select-none gap-2 whitespace-nowrap rounded border p-2 font-semibold outline-none ring-tertiary focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50"
+        class="relative inline-flex cursor-pointer items-center justify-center select-none gap-2 whitespace-nowrap rounded border p-2 font-semibold outline-none ring-gray focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50"
         :class="[variants[variant], { 'text-opacity-0': loading }]"
         :type="type"
         :is="as"
@@ -15,7 +15,7 @@
 import { IconLoader } from "@tabler/icons-vue";
 import type { Component } from "vue";
 
-type Variant = "primary" | "secondary" | "outline" | "danger" | "text";
+type Variant = "primary" | "gray" | "outline" | "danger" | "text";
 
 withDefaults(
     defineProps<{
@@ -34,13 +34,12 @@ withDefaults(
 
 const variants: Record<Variant, string> = {
     "primary":
-        "text-white bg-primary border-primary hover:border-slate-800 active:border-slate-700 hover:bg-slate-800 active:bg-slate-700 svg:text-white",
-    "secondary":
-        "text-primary bg-slate-100 border-slate-100 hover:border-tertiary active:border-tertiary hover:bg-tertiary active:bg-tertiary svg:text-primary",
+        "text-white bg-primary-500 border-primary-500 hover:border-primary-400 active:border-primary-300 hover:bg-primary-400 active:bg-primary-300 svg:text-white",
+    "gray": "text-primary-500 bg-gray-100 border-gray-100 hover:border-gray-200 active:border-gray-200 hover:bg-gray-200 active:bg-gray-200 svg:text-primary-500",
     "danger":
         "text-white bg-red-500 border-red-500 hover:border-red-600 active:border-red-600 hover:bg-red-600 active:bg-red-700 svg:text-white",
     "outline":
-        "text-primary border-tertiary bg-white hover:bg-slate-50 active:bg-slate-100 svg:text-primary",
-    "text": "text-primary bg-transparent border-transparent hover:border-slate-100 active:border-tertiary hover:bg-slate-100 active:bg-tertiary svg:text-primary",
+        "text-primary-500 border-gray-200 bg-white hover:bg-slate-50 active:bg-slate-100 svg:text-primary-500",
+    "text": "text-primary-500 bg-transparent border-transparent hover:border-slate-100 active:border-gray-200 hover:bg-slate-100 active:bg-gray-200 svg:text-primary-500",
 };
 </script>

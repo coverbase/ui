@@ -27,8 +27,25 @@ export type Color =
     | "neutral"
     | "stone";
 
+function toColor(property: string, shade: string, color: Color) {
+    return {
+        [`${property}-${shade}-50`]: `${property}-${color}-50`,
+        [`${property}-${shade}-100`]: `${property}-${color}-100`,
+        [`${property}-${shade}-200`]: `${property}-${color}-200`,
+        [`${property}-${shade}-300`]: `${property}-${color}-300`,
+        [`${property}-${shade}-400`]: `${property}-${color}-400`,
+        [`${property}-${shade}-500`]: `${property}-${color}-500`,
+        [`${property}-${shade}-600`]: `${property}-${color}-600`,
+        [`${property}-${shade}-700`]: `${property}-${color}-700`,
+        [`${property}-${shade}-800`]: `${property}-${color}-800`,
+        [`${property}-${shade}-900`]: `${property}-${color}-900`,
+        [`${property}-${shade}-950`]: `${property}-${color}-950`,
+    };
+}
+
 export type ModuleOptions = {
-    prefix?: string;
+    primaryColor: Color;
+    gray: Color;
 };
 
 export default defineNuxtModule<ModuleOptions>({
@@ -37,14 +54,16 @@ export default defineNuxtModule<ModuleOptions>({
         version: version,
         configKey: "ui",
     },
-    defaults: {},
+    defaults: {
+        primaryColor: "blue",
+        gray: "slate",
+    },
     async setup(options, nuxt) {
         const { resolve } = createResolver(import.meta.url);
 
         nuxt.options.css.push(resolve("./runtime/style.css"), "@unocss/reset/tailwind.css");
 
         addComponentsDir({
-            prefix: options.prefix,
             path: resolve("./runtime/components"),
         });
 
@@ -52,23 +71,20 @@ export default defineNuxtModule<ModuleOptions>({
 
         await installModule(unocssNuxt, {
             shortcuts: {
-                "text-primary": "text-slate-900",
-                "border-primary": "border-slate-900",
-                "divide-primary": "divide-slate-900",
-                "ring-primary": "ring-slate-900",
-                "bg-primary": "bg-slate-900",
+                ...toColor("text", "primary", options.primaryColor),
+                ...toColor("text", "gray", options.gray),
 
-                "text-secondary": "text-slate-400",
-                "border-secondary": "border-slate-400",
-                "divide-secondary": "divide-slate-400",
-                "ring-secondary": "ring-slate-400",
-                "bg-secondary": "bg-slate-400",
+                ...toColor("border", "primary", options.primaryColor),
+                ...toColor("border", "gray", options.gray),
 
-                "text-tertiary": "text-slate-200",
-                "border-tertiary": "border-slate-200",
-                "divide-tertiary": "divide-slate-200",
-                "ring-tertiary": "ring-slate-200",
-                "bg-tertiary": "bg-slate-200",
+                ...toColor("divide", "primary", options.primaryColor),
+                ...toColor("divide", "gray", options.gray),
+
+                ...toColor("ring", "primary", options.primaryColor),
+                ...toColor("ring", "gray", options.gray),
+
+                ...toColor("bg", "primary", options.primaryColor),
+                ...toColor("bg", "gray", options.gray),
             },
         } satisfies UnocssNuxtOptions);
     },

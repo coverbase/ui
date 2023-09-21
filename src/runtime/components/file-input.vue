@@ -14,7 +14,7 @@
             <span v-if="name">
                 {{ name }}
             </span>
-            <span class="text-secondary" v-else>
+            <span class="text-gray-400" v-else>
                 {{ placeholder }}
             </span>
         </span>

@@ -6,7 +6,7 @@
 
         <slot />
 
-        <p class="text-secondary" v-if="help">
+        <p class="text-gray-400" v-if="help">
             {{ help }}
         </p>
     </div>
