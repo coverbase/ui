@@ -1,6 +1,6 @@
 {
-    "unocss.root": ".",
-    "conventionalCommits.gitmoji": false,
-    "conventionalCommits.promptBody": false,
-    "conventionalCommits.scopes": ["ui"]
+  "unocss.root": ".",
+  "conventionalCommits.gitmoji": false,
+  "conventionalCommits.promptBody": false,
+  "conventionalCommits.promptScopes": false
 }

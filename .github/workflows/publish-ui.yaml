@@ -1,11 +1,9 @@
-name: Publish Ui
+name: Publish
 
 on:
     push:
         branches:
             - "main"
-        paths:
-            - "packages/ui/**"
 
 env:
     NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
@@ -27,4 +25,3 @@ jobs:
             - run: npm run build
 
             - run: npm publish --access public
-              working-directory: ./packages/ui
