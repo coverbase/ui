@@ -9,7 +9,7 @@
             leave-to-class="opacity-0"
         >
             <div
-                class="fixed inset-0 z-50 flex justify-center items-start overflow-y-auto bg-slate-900 bg-opacity-50 p-4"
+                class="fixed inset-0 z-50 flex justify-center items-start overflow-y-auto bg-primary bg-opacity-50 p-4"
                 v-if="isOpen"
             >
                 <div

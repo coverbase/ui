@@ -1,5 +1,5 @@
 <template>
-    <component class="rounded border border-slate-200 bg-white" :is="as">
+    <component class="rounded border border-tertiary bg-white" :is="as">
         <slot />
     </component>
 </template>

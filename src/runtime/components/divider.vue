@@ -1,5 +1,5 @@
 <template>
-    <hr class="shrink-0 self-stretch rounded border-none bg-slate-200" :class="variants[variant]" />
+    <hr class="shrink-0 self-stretch rounded border-none bg-tertiary" :class="variants[variant]" />
 </template>
 
 <script setup lang="ts">

@@ -25,7 +25,7 @@ withDefaults(
 );
 
 const variants: Record<Variant, string> = {
-    "primary": "hover:text-slate-500",
-    "secondary": "text-slate-500 hover:text-slate-900",
+    "primary": "hover:text-secondary",
+    "secondary": "text-secondary hover:text-primary",
 };
 </script>

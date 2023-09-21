@@ -3,7 +3,7 @@
         <label class="relative flex items-center justify-center">
             <input
                 type="checkbox"
-                class="appearance-none rounded bg-white border not-checked:hover:border-slate-300 border-slate-200 select-none h-6 w-6 cursor-pointer checked:bg-slate-900 checked:border-slate-900 focus-visible:ring-2 ring-slate-200 outline-none"
+                class="appearance-none rounded bg-white border not-checked:hover:border-tertiary border-tertiary select-none h-6 w-6 cursor-pointer checked:bg-primary checked:border-primary focus-visible:ring-2 ring-tertiary outline-none"
                 :value="value"
                 v-model="modelValue"
             />

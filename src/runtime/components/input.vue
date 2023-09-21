@@ -1,11 +1,11 @@
 <template>
     <label
-        class="not-focus-within:hover:border-slate-300 rounded border border-slate-200 overflow-hidden flex w-full bg-white focus-within:border-slate-900 cursor-text"
+        class="not-focus-within:hover:border-tertiary rounded border border-tertiary overflow-hidden flex w-full bg-white focus-within:border-primary cursor-text"
     >
         <slot name="before" />
 
         <input
-            class="w-full outline-none py-2 px-4 appearance-none placeholder:text-slate-400"
+            class="w-full outline-none py-2 px-4 appearance-none placeholder:text-secondary"
             :type="type"
             :placeholder="placeholder"
             :readonly="readonly"

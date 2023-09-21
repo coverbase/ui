@@ -3,7 +3,7 @@
         class="!justify-start"
         :variant="isActive ? 'secondary' : 'text'"
         :to="to"
-        :as="RouterLink"
+        :as="NuxtLink"
     >
         <component width="20" height="20" :is="icon" />
 
@@ -14,8 +14,9 @@
 </template>
 
 <script setup lang="ts">
+import { NuxtLink } from "#components";
 import { computed, type Component } from "vue";
-import { RouterLink, useRoute } from "vue-router";
+import { useRoute } from "vue-router";
 import Button from "./button.vue";
 
 const props = withDefaults(

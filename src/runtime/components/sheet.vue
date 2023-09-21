@@ -8,10 +8,7 @@
             leave-from-class="opacity-100"
             leave-to-class="opacity-0"
         >
-            <div
-                class="fixed inset-0 z-50 bg-slate-900 bg-opacity-50 flex justify-end"
-                v-if="isOpen"
-            >
+            <div class="fixed inset-0 z-50 bg-primary bg-opacity-50 flex justify-end" v-if="isOpen">
                 <div
                     ref="element"
                     class="bg-white shadow flex flex-col max-w-xl w-full gap-4 p-4 sm:p-6 overflow-y-scroll"
