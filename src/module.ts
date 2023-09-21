@@ -27,14 +27,6 @@ export type Color =
     | "neutral"
     | "stone";
 
-declare module "@nuxt/schema" {
-    interface AppConfigInput {
-        ui?: {
-            primaryColor?: Color;
-        };
-    }
-}
-
 export type ModuleOptions = {
     prefix?: string;
 };
