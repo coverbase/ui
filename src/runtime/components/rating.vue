@@ -1,5 +1,5 @@
 <template>
-    <div class="flex rounded border border-gray-200">
+    <div class="flex rounded border border-slate-200">
         <Button
             variant="text"
             @click="modelValue = modelValue === index + 1 ? 0 : rating"

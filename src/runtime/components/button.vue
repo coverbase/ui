@@ -1,6 +1,6 @@
 <template>
     <component
-        class="relative inline-flex cursor-pointer items-center justify-center select-none gap-2 whitespace-nowrap rounded border p-2 font-semibold outline-none ring-gray focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50"
+        class="relative inline-flex cursor-pointer items-center justify-center select-none gap-2 whitespace-nowrap rounded border p-2 font-semibold outline-none ring-slate-200 focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50"
         :class="[variants[variant], { 'text-opacity-0': loading }]"
         :type="type"
         :is="as"
@@ -14,14 +14,13 @@
 <script setup lang="ts">
 import { IconLoader } from "@tabler/icons-vue";
 import type { Component } from "vue";
-
-type Variant = "primary" | "secondary" | "gradient" | "outline" | "danger" | "text";
+import type { ButtonVariant } from "../types";
 
 withDefaults(
     defineProps<{
         as?: string | Component;
         type?: string;
-        variant?: Variant;
+        variant?: ButtonVariant;
         loading?: boolean;
     }>(),
     {
@@ -32,16 +31,14 @@ withDefaults(
     }
 );
 
-const variants: Record<Variant, string> = {
+const variants: Record<ButtonVariant, string> = {
     "primary":
-        "text-white bg-primary-500 border-primary-500 hover:border-primary-600 hover:bg-primary-600 active:border-primary-700 active:bg-primary-700",
+        "text-white bg-slate-900 border-slate-900 hover:border-slate-800 hover:bg-slate-800 active:border-slate-700 active:bg-slate-700",
     "secondary":
-        "bg-gray-100 border-gray-100 hover:border-gray-200 hover:bg-gray-200 active:border-gray-300 active:bg-gray-300",
-    "gradient":
-        "text-white bg-gradient-to-rt from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 active:from-primary-600 active:to-primary-800",
+        "bg-slate-100 border-slate-100 hover:border-slate-200 hover:bg-slate-200 active:border-slate-300 active:bg-slate-300",
     "danger":
         "text-white bg-red-500 border-red-500 hover:border-red-600 hover:bg-red-600 active:border-red-600 active:bg-red-700",
-    "outline": "bg-white border-gray-200 hover:bg-gray-50 active:bg-gray-100",
-    "text": "bg-transparent border-transparent hover:border-gray-100 hover:bg-gray-100 active:border-gray-200 active:bg-gray-200",
+    "outline": "bg-white border-slate-200 hover:bg-slate-50 active:bg-slate-100",
+    "text": "bg-transparent border-transparent hover:border-slate-100 hover:bg-slate-100 active:border-slate-200 active:bg-slate-200",
 };
 </script>

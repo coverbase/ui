@@ -1,5 +1,5 @@
 <template>
-    <Box class="divide-y divide-gray-200" v-if="items && items.length > 0">
+    <Box class="divide-y divide-slate-200" v-if="items && items.length > 0">
         <slot :item="item" v-for="item in items">
             {{ item }}
         </slot>

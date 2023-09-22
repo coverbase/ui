@@ -1,5 +1,5 @@
 <template>
-    <p class="text-gray-400">
+    <p class="text-slate-400">
         <slot />
     </p>
 </template>

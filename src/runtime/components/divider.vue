@@ -1,20 +1,20 @@
 <template>
-    <hr class="shrink-0 self-stretch rounded border-none bg-gray-200" :class="variants[variant]" />
+    <hr class="shrink-0 self-stretch rounded border-none bg-slate-200" :class="variants[variant]" />
 </template>
 
 <script setup lang="ts">
-type Variant = "horizontal" | "vertical";
+import type { DividerVariant } from "../types";
 
 withDefaults(
     defineProps<{
-        variant?: Variant;
+        variant?: DividerVariant;
     }>(),
     {
         variant: "horizontal",
     }
 );
 
-const variants: Record<Variant, string> = {
+const variants: Record<DividerVariant, string> = {
     "horizontal": "flex h-px",
     "vertical": "inline-flex w-px my-auto h-6",
 };

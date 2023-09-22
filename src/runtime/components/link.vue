@@ -10,13 +10,12 @@
 
 <script setup lang="ts">
 import type { Component } from "vue";
-
-type Variant = "primary" | "secondary";
+import type { LinkVariant } from "../types";
 
 withDefaults(
     defineProps<{
         as?: string | Component;
-        variant?: Variant;
+        variant?: LinkVariant;
     }>(),
     {
         as: "a",
@@ -24,8 +23,8 @@ withDefaults(
     }
 );
 
-const variants: Record<Variant, string> = {
-    "primary": "hover:text-primary-500",
-    "secondary": "text-gray-400 hover:text-gray-500",
+const variants: Record<LinkVariant, string> = {
+    "primary": "hover:text-slate-800",
+    "secondary": "text-slate-400 hover:text-slate-900",
 };
 </script>
