@@ -71,6 +71,9 @@ export default defineNuxtModule<ModuleOptions>({
 
         await installModule(unocssNuxt, {
             shortcuts: {
+                ...toColor("from", "primary", options.primaryColor),
+                ...toColor("to", "primary", options.primaryColor),
+
                 ...toColor("text", "primary", options.primaryColor),
                 ...toColor("text", "gray", options.gray),
 

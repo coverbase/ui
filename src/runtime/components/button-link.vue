@@ -1,5 +1,10 @@
 <template>
-    <Button class="!justify-start" :variant="isActive ? 'gray' : 'text'" :to="to" :as="NuxtLink">
+    <Button
+        class="!justify-start"
+        :variant="isActive ? 'secondary' : 'text'"
+        :to="to"
+        :as="RouterLink"
+    >
         <component width="20" height="20" :is="icon" />
 
         <span class="hidden sm:inline-block">
@@ -9,9 +14,8 @@
 </template>
 
 <script setup lang="ts">
-import { NuxtLink } from "#components";
 import { computed, type Component } from "vue";
-import { useRoute } from "vue-router";
+import { RouterLink, useRoute } from "vue-router";
 import Button from "./button.vue";
 
 const props = withDefaults(
