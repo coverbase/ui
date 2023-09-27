@@ -1,11 +1,11 @@
 <template>
-    <component class="rounded border border-slate-200 bg-white" :is="as">
+    <component ref="htmlElement" class="rounded border border-slate-200 bg-white" :is="as">
         <slot />
     </component>
 </template>
 
 <script setup lang="ts">
-import type { Component } from "vue";
+import { ref, type Component } from "vue";
 
 withDefaults(
     defineProps<{
@@ -15,4 +15,10 @@ withDefaults(
         as: "div",
     }
 );
+
+const htmlElement = ref<HTMLElement>();
+
+defineExpose({
+    htmlElement: htmlElement,
+});
 </script>
