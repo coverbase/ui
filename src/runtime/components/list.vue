@@ -10,6 +10,7 @@
 </template>
 
 <script setup generic="T" lang="ts">
+import Box from "./box.vue";
 import Empty from "./empty.vue";
 
 defineProps<{
