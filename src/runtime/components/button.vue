@@ -1,7 +1,7 @@
 <template>
     <component
-        class="relative inline-flex cursor-pointer items-center justify-center select-none gap-2 whitespace-nowrap rounded border p-2 font-semibold outline-none ring-slate-200 focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50"
-        :class="[variants[variant], { 'text-opacity-0': loading }]"
+        class="relative inline-flex cursor-pointer items-center select-none gap-2 whitespace-nowrap rounded border p-2 font-semibold outline-none ring-slate-200 focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50"
+        :class="[variants[variant], justify[align], { 'text-opacity-0': loading }]"
         :type="type"
         :is="as"
     >
@@ -14,22 +14,30 @@
 <script setup lang="ts">
 import { IconLoader } from "@tabler/icons-vue";
 import type { Component } from "vue";
-import type { ButtonVariant } from "../types";
+import type { ButtonVariant, JustifyContent } from "../types";
 
 withDefaults(
     defineProps<{
         as?: string | Component;
         type?: string;
         variant?: ButtonVariant;
+        align?: JustifyContent;
         loading?: boolean;
     }>(),
     {
         as: "button",
         type: "button",
         variant: "primary",
+        align: "center",
         loading: false,
     }
 );
+
+const justify: Record<JustifyContent, string> = {
+    "start": "justfiy-start",
+    "center": "justfiy-center",
+    "end": "justfiy-end",
+};
 
 const variants: Record<ButtonVariant, string> = {
     "primary":
