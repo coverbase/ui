@@ -34,9 +34,9 @@ withDefaults(
 );
 
 const justify: Record<JustifyContent, string> = {
-    "start": "justfiy-start",
-    "center": "justfiy-center",
-    "end": "justfiy-end",
+    "start": "justify-start",
+    "center": "justify-center",
+    "end": "justify-end",
 };
 
 const variants: Record<ButtonVariant, string> = {
