@@ -1,7 +1,9 @@
 <template>
     <Box class="flex items-center">
         <Button variant="text" @click="handleChange(-1)">
-            <IconMinus width="20" height="20" />
+            <slot name="minus">
+                <IconMinus width="18" height="18" />
+            </slot>
         </Button>
 
         <span class="px-4">
@@ -9,7 +11,9 @@
         </span>
 
         <Button variant="text" @click="handleChange(1)">
-            <IconPlus width="20" height="20" />
+            <slot name="plus">
+                <IconPlus width="18" height="18" />
+            </slot>
         </Button>
     </Box>
 </template>
