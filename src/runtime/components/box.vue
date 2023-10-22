@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 import { type Component } from "vue";
-import { BoxVariant } from "../types";
+import { type BoxVariant } from "../types";
 
 withDefaults(
     defineProps<{

@@ -54,7 +54,7 @@
 <script setup lang="ts">
 import { useEventListener } from "@vueuse/core";
 import { computed, ref } from "vue";
-import type { Hsva } from "../types";
+import { type Hsva } from "../types";
 import Range from "./range.vue";
 
 const modelValue = defineModel<Hsva>({

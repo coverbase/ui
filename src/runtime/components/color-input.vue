@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import { Hsva, hslToHsv, hsvToHsl, parseToHsla, useConverter } from "../types";
+import { hslToHsv, hsvToHsl, parseToHsla, useConverter, type Hsva } from "../types";
 import ColorPicker from "./color-picker.vue";
 import Input from "./input.vue";
 

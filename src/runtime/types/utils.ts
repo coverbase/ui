@@ -1,4 +1,4 @@
-import { Ref, ref, watch } from "vue";
+import { ref, watch, type Ref } from "vue";
 
 export function useConverter<TInput, TOutput>(
     inputValue: Ref<TInput>,

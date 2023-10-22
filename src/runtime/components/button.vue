@@ -13,8 +13,8 @@
 
 <script setup lang="ts">
 import { IconLoader } from "@tabler/icons-vue";
-import type { Component } from "vue";
-import type { ButtonVariant, JustifyContent } from "../types";
+import { type Component } from "vue";
+import { type ButtonVariant, type JustifyContent } from "../types";
 
 withDefaults(
     defineProps<{

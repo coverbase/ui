@@ -9,8 +9,8 @@
 </template>
 
 <script setup lang="ts">
-import type { Component } from "vue";
-import type { LinkVariant } from "../types";
+import { type Component } from "vue";
+import { type LinkVariant } from "../types";
 
 withDefaults(
     defineProps<{

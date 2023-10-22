@@ -37,7 +37,7 @@
 <script setup generic="T" lang="ts">
 import { IconCheck, IconChevronDown } from "@tabler/icons-vue";
 import { onClickOutside, onKeyStroke } from "@vueuse/core";
-import { FunctionalComponent, computed, ref } from "vue";
+import { computed, ref, type FunctionalComponent } from "vue";
 import Box from "./box.vue";
 import Button from "./button.vue";
 

@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import type { DividerVariant } from "../types";
+import { type DividerVariant } from "../types";
 
 withDefaults(
     defineProps<{
