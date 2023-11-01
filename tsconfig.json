@@ -1,18 +1,3 @@
 {
-    "compilerOptions": {
-        "forceConsistentCasingInFileNames": true,
-        "jsx": "preserve",
-        "target": "ESNext",
-        "module": "ESNext",
-        "moduleResolution": "Node",
-        "skipLibCheck": true,
-        "isolatedModules": true,
-        "useDefineForClassFields": true,
-        "strict": true,
-        "allowJs": true,
-        "noEmit": true,
-        "resolveJsonModule": true,
-        "allowSyntheticDefaultImports": true,
-        "verbatimModuleSyntax": true
-    }
+  "extends": "./.nuxt/tsconfig.json"
 }

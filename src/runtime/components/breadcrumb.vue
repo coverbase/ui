@@ -1,9 +1,9 @@
 <template>
     <span class="flex items-center gap-2">
         <template v-for="(route, index) in routes">
-            <RouterLink class="truncate last:font-semibold hover:underline" :to="route.to">
+            <NuxtLink class="truncate last:font-semibold hover:underline" :to="route.to">
                 {{ route.name }}
-            </RouterLink>
+            </NuxtLink>
 
             <IconSlash
                 width="20"
@@ -16,8 +16,8 @@
 </template>
 
 <script setup lang="ts">
+import { type RouteLocationRaw } from "#vue-router";
 import { IconSlash } from "@tabler/icons-vue";
-import { RouterLink, type RouteLocationRaw } from "vue-router";
 
 defineProps<{
     routes: Array<{

@@ -20,6 +20,12 @@ export default defineNuxtModule({
 
         nuxt.options.alias["#ui"] = runtime;
 
+        nuxt.options.vite.vue = {
+            script: {
+                defineModel: true,
+            },
+        };
+
         addComponentsDir({
             prefix: "U",
             path: resolve("./runtime/components"),
