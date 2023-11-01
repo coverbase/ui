@@ -1,12 +1,14 @@
 <template>
-    <UBox class="flex items-center gap-4 text-sm text-center w-full">
+    <UBox class="flex items-center gap-4 text-sm justify-between w-full">
         <UButton variant="text" @click="handleChange(-1)">
             <slot name="minus">
                 <IconMinus width="20" height="20" />
             </slot>
         </UButton>
 
-        {{ modelValue }}
+        <slot>
+            {{ modelValue }}
+        </slot>
 
         <UButton variant="text" @click="handleChange(1)">
             <slot name="plus">
