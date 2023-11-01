@@ -37,5 +37,7 @@
 
             <UPhoneInput placeholder="Phone Input" />
         </div>
+
+        <UTextarea />
     </main>
 </template>
