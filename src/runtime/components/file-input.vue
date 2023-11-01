@@ -1,5 +1,5 @@
 <template>
-    <Button variant="outline" class="justify-between" @click="input?.click()">
+    <UButton variant="outline" class="justify-between" @click="input?.click()">
         <span class="px-2 font-normal">
             <input
                 ref="input"
@@ -20,13 +20,12 @@
         </span>
 
         <IconFile width="18" height="18" />
-    </Button>
+    </UButton>
 </template>
 
 <script setup lang="ts">
 import { IconFile } from "@tabler/icons-vue";
 import { computed, ref } from "vue";
-import Button from "./button.vue";
 
 defineProps<{
     placeholder?: string;

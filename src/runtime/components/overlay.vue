@@ -10,7 +10,7 @@
             leave-from-class="opacity-100"
             leave-to-class="opacity-0"
         >
-            <Box class="absolute flex flex-col gap-1 shadow" v-bind="attributes" v-if="isOpen">
+            <UBox class="absolute flex flex-col gap-1 shadow" v-bind="attributes" v-if="isOpen">
                 <slot
                     name="content"
                     :is-open="isOpen"
@@ -18,7 +18,7 @@
                     :close="handleClose"
                     :toggle="handleToggle"
                 />
-            </Box>
+            </UBox>
         </Transition>
     </div>
 </template>
@@ -26,7 +26,6 @@
 <script setup lang="ts">
 import { onClickOutside, onKeyStroke } from "@vueuse/core";
 import { ref, useAttrs } from "vue";
-import Box from "./box.vue";
 
 defineOptions({
     inheritAttrs: false,

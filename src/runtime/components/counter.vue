@@ -1,27 +1,23 @@
 <template>
-    <Box class="flex items-center">
-        <Button variant="text" @click="handleChange(-1)">
+    <UBox class="flex items-center gap-4 text-sm text-center w-full">
+        <UButton variant="text" @click="handleChange(-1)">
             <slot name="minus">
-                <IconMinus width="18" height="18" />
+                <IconMinus width="20" height="20" />
             </slot>
-        </Button>
+        </UButton>
 
-        <span class="px-4">
-            {{ modelValue }}
-        </span>
+        {{ modelValue }}
 
-        <Button variant="text" @click="handleChange(1)">
+        <UButton variant="text" @click="handleChange(1)">
             <slot name="plus">
-                <IconPlus width="18" height="18" />
+                <IconPlus width="20" height="20" />
             </slot>
-        </Button>
-    </Box>
+        </UButton>
+    </UBox>
 </template>
 
 <script setup lang="ts">
 import { IconMinus, IconPlus } from "@tabler/icons-vue";
-import Box from "./box.vue";
-import Button from "./button.vue";
 
 const props = defineProps<{
     min?: number;

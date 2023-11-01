@@ -1,6 +1,6 @@
 <template>
     <div class="flex rounded border border-slate-200">
-        <Button
+        <UButton
             variant="text"
             @click="modelValue = modelValue === index + 1 ? 0 : rating"
             v-for="(rating, index) in max"
@@ -11,13 +11,12 @@
                 height="20"
                 :class="{ '!text-yellow-500': index + 1 <= modelValue }"
             />
-        </Button>
+        </UButton>
     </div>
 </template>
 
 <script setup lang="ts">
 import { IconStar, IconStarFilled } from "@tabler/icons-vue";
-import Button from "./button.vue";
 
 defineProps<{
     max: number;

@@ -1,15 +1,13 @@
 <template>
     <div class="flex flex-col gap-2">
-        <ColorPicker v-model="hsva" />
+        <UColorPicker v-model="hsva" />
 
-        <Input v-model="modelValue" />
+        <UInput v-model="modelValue" />
     </div>
 </template>
 
 <script setup lang="ts">
 import { hslToHsv, hsvToHsl, parseToHsla, useConverter, type Hsva } from "../types";
-import ColorPicker from "./color-picker.vue";
-import Input from "./input.vue";
 
 const modelValue = defineModel<string>();
 
