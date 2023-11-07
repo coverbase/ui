@@ -1,6 +1,6 @@
 {
     "name": "@coverbase/ui",
-    "version": "0.0.33",
+    "version": "0.0.34",
     "homepage": "https://coverbase.co",
     "repository": "coverbase/coverbase",
     "license": "MIT",
@@ -24,18 +24,18 @@
         "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground"
     },
     "dependencies": {
-        "@nuxt/kit": "^3.8.0",
+        "@nuxt/kit": "^3.8.1",
         "@tabler/icons-vue": "^2.40.0",
-        "@unocss/nuxt": "^0.57.1",
-        "@unocss/reset": "^0.57.1",
+        "@unocss/nuxt": "^0.57.2",
+        "@unocss/reset": "^0.57.2",
         "@vueuse/nuxt": "^10.5.0"
     },
     "devDependencies": {
-        "@nuxt/module-builder": "^0.5.2",
-        "@nuxt/schema": "^3.8.0",
-        "nuxt": "^3.8.0",
+        "@nuxt/module-builder": "^0.5.3",
+        "@nuxt/schema": "^3.8.1",
+        "nuxt": "^3.8.1",
         "prettier": "^3.0.3",
         "prettier-plugin-tailwindcss": "^0.5.6",
-        "unocss": "^0.57.1"
+        "unocss": "^0.57.2"
     }
 }
