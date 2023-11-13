@@ -16,7 +16,7 @@
             leave-from-class="opacity-100"
             leave-to-class="opacity-0"
         >
-            <UBox class="absolute shadow mt-1 w-full flex flex-col p-1 gap-1 z-10" v-if="isOpen">
+            <UBox class="absolute shadow mt-1 w-full flex flex-col p-1 gap-1 z-40" v-if="isOpen">
                 <UButton
                     variant="text"
                     class="justify-between"
