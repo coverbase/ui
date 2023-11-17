@@ -1,6 +1,6 @@
 <template>
-    <UBox class="flex items-center gap-4 text-sm justify-between w-full">
-        <UButton variant="text" @click="handleChange()">
+    <UBox class="flex items-center gap-4 justify-between w-full">
+        <UButton variant="text" @click="handleChange(-step)">
             <slot name="minus">
                 <IconMinus width="20" height="20" />
             </slot>
@@ -10,7 +10,7 @@
             {{ modelValue }}
         </slot>
 
-        <UButton variant="text" @click="handleChange()">
+        <UButton variant="text" @click="handleChange(step)">
             <slot name="plus">
                 <IconPlus width="20" height="20" />
             </slot>
@@ -20,6 +20,7 @@
 
 <script setup lang="ts">
 import { IconMinus, IconPlus } from "@tabler/icons-vue";
+import { computed } from "vue";
 
 const props = withDefaults(
     defineProps<{
@@ -37,8 +38,10 @@ const modelValue = defineModel<number>({
     default: 0,
 });
 
-function handleChange() {
-    const size = modelValue.value + props.step;
+const precision = computed(() => props.step.toString().split(".").length);
+
+function handleChange(value: number) {
+    const size = Number((modelValue.value + value).toPrecision(precision.value));
 
     if (props.min && size < props.min) {
         return;

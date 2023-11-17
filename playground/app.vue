@@ -39,5 +39,15 @@
         </div>
 
         <UTextarea />
+
+        <UCounter :min="0.1" :step="0.1" :max="1" v-model="value" />
+
+        <URange class="bg-slate-900" />
     </main>
 </template>
+
+<script setup lang="ts">
+import { ref } from "vue";
+
+const value = ref(1);
+</script>
